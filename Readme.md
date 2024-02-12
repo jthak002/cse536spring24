@@ -27,3 +27,11 @@
 - Run server.py
 
 ![Alt text](docs/img/werewolves/werewolves-runserver.png)
+
+
+##### POSSIBLE ERRORS
+
+1. Unable to locate python2
+
+Cancel installation and run ```sudo apt upgrade``` and ```sudo apt upgrade```
+![image](https://github.com/jthak002/cse536spring24/assets/12949012/61225d01-7b02-413a-8a41-d998214bfba3)
