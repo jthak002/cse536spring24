@@ -33,5 +33,5 @@
 
 1. Unable to locate python2
 
-Cancel installation and run ```sudo apt upgrade``` and ```sudo apt upgrade```
+Cancel installation and run ```sudo apt update``` and ```sudo apt upgrade```
 ![image](https://github.com/jthak002/cse536spring24/assets/12949012/61225d01-7b02-413a-8a41-d998214bfba3)
