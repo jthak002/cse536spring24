@@ -15,9 +15,6 @@
 
 - ![image](img/tailscale/tailscale-adddevices.png)
 
-### Enable Tailscale SSH
-
-- ```tailscale set --ssh```
 
 ### Sharing device
 
