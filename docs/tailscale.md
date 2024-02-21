@@ -21,3 +21,10 @@
 - Share invite link to allow others to add ypur device
 
 - ![alt text](img/tailscale/tailscale-share.png)
+
+### Enable SSH
+
+- Navigate to /etc/ssh/sshd_config.d/
+- Set password authentication to 'yes'
+
+![alt text](./img/tailscale/tailscale-ssh-local.png)
