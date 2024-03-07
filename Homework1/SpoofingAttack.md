@@ -58,3 +58,8 @@ if readVulnerability_2 != 0:
     # log('send error:%s'%p,1,0,1)
 
 ```
+
+## RESULTS
+
+- ![Player 1 impersonating others](./images/spoofing-result.png)
+- ![other players view](./images/spoofing-result1.png)
