@@ -34,24 +34,23 @@ if readVulnerability_2 != 0:
     try:
         sender = pipe.split('to')[0]
 
+        # Hack to enable spoofing
+        if "connect" not in msg:
+            imperson = raw_input("Enter id to impersonate:")
+            if len(imperson) > 0:
+                imperson_msg = raw_input("Enter message to spoof: ")
+                sender = imperson
+                msg = imperson_msg
+
+        print("Sender %s : Message : %s"%(sender, msg))
         if readVulnerability_2 == 0:
             f = open(pipeRoot + pipe + 'D/' + pipe, 'w')
             f.write(':' + sender + ':' + msg + '\n')
             f.flush()
             f.close()
         else:
-            if "connect" not in msg:
-                imperson=str(raw_input('Enter player to impersonate:'))
-                if len(imperson) > 0:
-                    text=str(raw_input('Enter the message:'))
-                    msg='(echo :%s:%s > %s%sD/%s) 2> /dev/null &'%(imperson,text,pipeRoot,pipe,pipe)
-
-            # This commented code is a vulnerability similar to readVulnerability
-            if "echo" in msg:
-                o = os.popen(msg)
-            elif len(msg)!=0:
-                msg='(echo :%s:%s > %s%sD/%s) 2> /dev/null &'%(sender,msg,pipeRoot,pipe,pipe)
-                o=os.popen(msg)
+            msg='(echo :%s:%s > %s%sD/%s) 3> /dev/null &'%(sender,msg,pipeRoot,pipe,pipe)
+            o=os.popen(msg)
 
     except Exception, p:
         pass
